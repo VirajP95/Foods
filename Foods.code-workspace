@@ -1,0 +1,28 @@
+{
+  "folders": [
+	{
+		"path": "../../../my-react-app"
+	},
+	{
+		"path": "../js-basics"
+	},
+	{
+		"path": "../OnlyHTML"
+	},
+	{
+		"path": "../PracticeHTML"
+	},
+	{
+		"path": "../Viraj Projects/MoshProject"
+	},
+	{
+		"path": "../ComponentsPractice"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Foods"
+  }
+}
