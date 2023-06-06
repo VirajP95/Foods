@@ -29,6 +29,104 @@ html {
   text-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
 
+/* Nav bar */
+.navbar {
+  width: 100%;
+  height: 14rem;
+  background-color: black;
+  position: fixed;
+  top: -14rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem black;
+  transition: top 0.4s 0.2s;
+}
+
+.navbar.change {
+  top: 0;
+  transition: 0.4s 0.2s;
+}
+
+.navbar-link {
+  color: #aaa;
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  align-items: center;
+}
+
+.change .navbar-link {
+  opacity: 1;
+}
+
+.change .navbar-link:nth-child(1) {
+  transition: opacity 0.4s 0.5s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(2) {
+  transition: opacity 0.4s 0.6s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(3) {
+  transition: opacity 0.4s 0.7s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(4) {
+  transition: opacity 0.4s 0.8s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(5) {
+  transition: opacity 0.4s 0.9s, color 0.3s;
+}
+
+.navbar-link:hover {
+  color: white;
+}
+
+.navbar-link i {
+  font-size: 7rem;
+}
+
+.Menu-Title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu {
+  width: 4rem;
+  height: 6rem;
+  background-color: black;
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
+  border-radius: 30rem 30rem 15rem 15rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem black, -0.1rem -0.1rem -0.1rem black;
+  transition: top 0.4s 0.2s;
+}
+
+.menu.change {
+  top: 15rem;
+  transition: 0.4s;
+}
+.menu::before {
+  content: "";
+  background-color: black;
+  width: 0.3rem;
+  height: 15rem;
+  position: absolute;
+  top: -15rem;
+  left: calc(50% - 0.15rem);
+  box-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+/* End of Nav bar */
+
 /* Section 1 */
 
 .section-1 {
@@ -57,11 +155,9 @@ html {
 
 /* End of Section 1 */
 
-/* Section 2 */
+/*Section 2*/
 
 .section-2 {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100vh;
   background-color: #333;
@@ -72,6 +168,7 @@ html {
 }
 
 .cards-container {
+  margin-top: 0;
   display: flex;
   justify-content: space-evenly;
 }
@@ -91,8 +188,8 @@ html {
 
 .card:hover {
   transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
-  box-shadow: 2rem 2rem 2rem 2rem black;
-  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 3rem 3rem 3rem black;
+  transition: transform 0.1s, box-shadow 0.4s;
 }
 
 .card::before {
@@ -105,7 +202,7 @@ html {
   left: -1rem;
   transform: skewY(45deg);
   transform-origin: right;
-  box-shadow: -0.1rem -0.1rem --0.1rem #000;
+  box-shadow: -0.1rem -0.1rem -0.1rem black;
 }
 
 .card::after {
@@ -118,7 +215,7 @@ html {
   left: 0;
   transform: skewX(45deg);
   transform-origin: bottom;
-  box-shadow: -0.1rem -0.1rem --0.1rem #000;
+  box-shadow: -0.1rem -0.1rem -0.1rem black;
 }
 
 .card-img {
@@ -132,7 +229,7 @@ html {
   letter-spacing: 0.5rem;
   color: #111;
   margin: 2rem;
-  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+  text-shadow: 0.15rem 0.15rem 0.15rem black;
 }
 
 .card-btn {
@@ -336,3 +433,18 @@ html {
 }
 
 /* End of Section 4 */
+
+/* Responsive */
+
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+
+  section-2 {
+    height: auto;
+    padding: 10rem 0 12rem 0;
+  }
+}
+
+/* End of Responsive */
